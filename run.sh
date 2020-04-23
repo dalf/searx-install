@@ -9,4 +9,4 @@ vagrant ssh -c 'sudo /shared/test/presetup.sh'
 vagrant reload
 vagrant ssh -c 'sudo /shared/test/setup.sh'
 vagrant reload
-vagrant ssh -c 'sudo /shared/tesT/check.sh'
+vagrant ssh -c 'sudo /shared/test/check.sh'

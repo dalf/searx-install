@@ -11,7 +11,7 @@ git apply /shared/searx.patch
 sed -i 's/export GIT_BRANCH=master/export GIT_BRANCH=filtron/g' Makefile
 make buildenv
 
-chown -R vagrant:vagrant /share/searx
+chown -R vagrant:vagrant /srv/searx
 
 export FORCE_TIMEOUT=0
 ./utils/searx.sh install all
