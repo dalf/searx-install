@@ -1,3 +1,4 @@
 [submodule "searx"]
 	path = searx
 	url = git@github.com:return42/searx.git
+
