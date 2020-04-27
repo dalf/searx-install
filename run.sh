@@ -1,12 +1,12 @@
 #!/bin/sh
-set -e
-
 VAGRANT=$(which vagrant)
 
 if [ -z ${VAGRANT} ]; then
     echo "vagrant not found"
     exit 1
 fi
+
+set -e
 
 # create a patch (applied later in /shared/test/setup.sh )
 cd searx
