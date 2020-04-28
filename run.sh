@@ -1,5 +1,5 @@
-#!/bin/sh
-set -e
+#!/usr/bin/env bash
+# -*- coding: utf-8; mode: bash  -*-
 
 VAGRANT=$(which vagrant)
 
@@ -7,6 +7,8 @@ if [ -z ${VAGRANT} ]; then
     echo "vagrant not found"
     exit 1
 fi
+
+set -e
 
 # create a patch (applied later in /shared/test/setup.sh )
 cd searx
