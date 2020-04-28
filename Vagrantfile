@@ -1,8 +1,18 @@
 # -*- coding: utf-8; mode: ruby  -*-
 # vi: set ft=ruby :
 
+class VagrantPlugins::ProviderVirtualBox::Action::Network
+  def dhcp_server_matches_config?(dhcp_server, config)
+    true
+  end
+end
+
+# monkey patch [vagrant issue 8878](https://github.com/hashicorp/vagrant/issues/8878)
+# see https://github.com/hashicorp/vagrant/issues/8878#issuecomment-345112810
+
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"
+  config.vm.network 'private_network', type: :dhcp
   config.vm.synced_folder "shared/", "/shared"
   config.vm.provider "virtualbox" do |vb|
     # VM name
