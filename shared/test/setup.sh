@@ -19,7 +19,7 @@ chown -R vagrant:vagrant /srv/searx
 export FORCE_TIMEOUT=0
 ./utils/searx.sh install all
 ./utils/filtron.sh install all
-./utils/morty.sh install all
+PUBLIC_URL_MORTY="http://$(/shared/test/eth1_ipv4.sh)/morty/" ./utils/morty.sh install all
 
 ./utils/filtron.sh nginx install
 ./utils/morty.sh nginx install
