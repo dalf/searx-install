@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# -*- coding: utf-8; mode: bash -*-
+
 git config --global user.email johndoe@nowhere.com
 git config --global user.name johndoe
 
