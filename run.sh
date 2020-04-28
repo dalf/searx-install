@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# -*- coding: utf-8; mode: bash  -*-
+
 VAGRANT=$(which vagrant)
 
 if [ -z ${VAGRANT} ]; then
