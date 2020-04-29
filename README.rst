@@ -17,7 +17,12 @@ To update submodule branch filtron https://github.com/return42/searx.git ::
   git pull origin filtron
 
 To get started, first install vagrant_ and if you do not have any other
-preference install VirtualBox (see providers_).
+preference install VirtualBox (see providers_).  Don't forget to add your user
+to provider's group, otherwise you will not have access to the *host-only*
+network and other resources.  If you are using VirtualBox use the line below.
+To get active you need to logout of your (desktop) session and login again::
+
+  sudo usermod -a -G vboxusers "$USER"
 
 There is a bug with the *host-only* network in vagrant (see issue-3083_).  If
 you are using VirtualBox, the simplest workaround is to remove the ``vboxnet0``
