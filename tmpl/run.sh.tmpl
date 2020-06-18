@@ -10,11 +10,6 @@ fi
 
 set -e
 
-# create a patch (applied later in /shared/test/setup.sh )
-cd ../../searx
-git diff > ../shared/searx.patch
-cd -
-
 # destroy existing
 ${VAGRANT} destroy -f
 
