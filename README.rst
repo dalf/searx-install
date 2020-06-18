@@ -36,7 +36,11 @@ adapter which was inital created by VirtualBox (vagrant will create it's own)::
   $ VBoxManage dhcpserver remove --netname HostInterfaceNetworking-vboxnet0
   ...
 
-To test just simply run the shell script::
+Create the different configurations::
+
+  ./create-configs.sh
+
+Choose a configuration in the ```config``` directory, then to test just simply run the shell script::
 
   ./run.sh
   ..

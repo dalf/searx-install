@@ -4,6 +4,8 @@
 git config --global user.email johndoe@nowhere.com
 git config --global user.name johndoe
 
+HTTP_SERVER = "$1"
+
 mkdir -p /srv/
 cd /srv
 
@@ -26,5 +28,5 @@ export FORCE_TIMEOUT=0
 ./utils/filtron.sh install all
 ./utils/morty.sh install all
 
-./utils/filtron.sh nginx install
-./utils/morty.sh nginx install
+./utils/filtron.sh "{$HTTP_SERVER}" install
+./utils/morty.sh "{$HTTP_SERVER}" install
