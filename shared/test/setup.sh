@@ -9,10 +9,8 @@ HTTP_SERVER = "$1"
 mkdir -p /srv/
 cd /srv
 
-git clone https://github.com/return42/searx/
+git clone https://github.com/asciimoo/searx/
 cd searx
-git checkout filtron
-git apply /shared/searx.patch
 
 # brand: branch filtron
 sed -i 's/export GIT_BRANCH=master/export GIT_BRANCH=filtron/g' Makefile
